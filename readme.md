@@ -2,6 +2,10 @@
 
 Topics covered are: Node.js, Git, Heroku, JWT and Jest.
 
+# DOCUMENTATION
+
+[FAVS API DOCUMENTATION](https://github.com/RenzoEMH/Assesment_back_end/blob/develop/Documentation%20API-Favs.pdf)
+
 # QUESTIONS:
 
 **_1. Indicate which are the parts of the following url: https://backend.mega-app.com.co:8080/api/articles/search?docid=1020&hl=en#dayone_**
