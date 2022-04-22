@@ -62,7 +62,7 @@ export const deleteList = async (request, response) => {
   try {
     const { id } = request.params;
     const listToDelete = await List.findById(id);
-    if (!listToDelete) res.status(204).json({ error: "No list to delete" });
+    if (!listToDelete) res.status(204).json({ message: "No list to delete" });
     else {
       const deletedList = await List.deleteOne({ _id: id });
       response.status(200).json({ message: "success", deletedList });
