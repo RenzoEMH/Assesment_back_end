@@ -8,7 +8,7 @@ export const login = async (request, response) => {
   const user = await User.find({ email });
   const userDB = user[0];
   if (user.length === 0)
-    return response.status(403).send({ message: "Email doesn't exist" });
+    return response.status(400).send({ message: "Email doesn't exist" });
   bcrypt.compare(password, userDB.password, (err, isPassValid) => {
     if (email === userDB.email && isPassValid) {
       jwt.sign(
@@ -26,7 +26,7 @@ export const login = async (request, response) => {
         }
       );
     } else {
-      response.status(403).send({ message: "Invalid password or email" });
+      response.status(400).send({ message: "Invalid password or email" });
     }
   });
 };
